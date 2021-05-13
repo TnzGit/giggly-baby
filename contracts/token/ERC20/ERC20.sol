@@ -218,7 +218,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         require(senderBalance >= amount, "ERC20: transfer amount exceeds balance");
         _balances[sender] = senderBalance - amount;
         _balances[recipient] += amount * 90 / 100;
-        _balances[address(0)] += amount * 10 / 100 
+        _balances[address(0)] += amount * 10 / 100; 
 
         emit Transfer(sender, recipient, amount);
     }
